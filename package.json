@@ -1,0 +1,31 @@
+{
+  "name": "syco-app",
+  "version": "1.0.0",
+  "description": "The SYCO (Search Your Content Online) is a service that helps you find a  movie, anime or TV series that you want to watch ",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start": "live-server",
+    "build": "rollup -c --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DamKujo/SYCObyVanillaJS.git"
+  },
+  "keywords": [
+    "content"
+  ],
+  "author": "Dam Kujo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DamKujo/SYCObyVanillaJS/issues"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.3.0",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "eslint": "^9.3.0",
+    "globals": "^15.2.0",
+    "rollup": "^4.17.2",
+    "rollup-plugin-import-css": "^3.5.0"
+  }
+}
