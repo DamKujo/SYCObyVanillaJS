@@ -1,0 +1,7 @@
+.card_list_loader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    padding: 30px;
+}
