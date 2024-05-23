@@ -18,14 +18,24 @@ export class CardList extends DivComponent{
             `;
             return this.el;
         }
-        this.el.classList.add('card_list');
-        this.el.innerHTML = `
+        if(this.parentState.totalNumber === 0){
+            this.el.innerHTML = `
+            <h1>
+                Чтобы найти фильм, аниме или сериал, введи в поле его название  
+            </h1>
+            `;
+        } else{
+            this.el.innerHTML = `
             <h1>
                 Найдено ${this.parentState.totalNumber}
             </h1>
         `;
+        }
+        const cardGrid = document.createElement('div');
+        cardGrid.classList.add('card_grid');
+        this.el.append(cardGrid);
         for (const card of this.parentState.list){
-            this.el.append(new Card(this.appState, card).render());
+            cardGrid.append(new Card(this.appState, card).render());
         }
         return this.el;
     }
