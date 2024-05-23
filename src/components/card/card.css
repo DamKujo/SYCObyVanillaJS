@@ -24,7 +24,7 @@
     background: var(--black);
     color: var(--white);
     padding: 10px;
-    min-height: 110px;
+    height: 160px;
 }
 
 .card_rating{
