@@ -64,6 +64,19 @@ export class MainView extends AbstractView{
 
     render(){
         const main = document.createElement('div');
+        if(this.state.totalNumber === 0){
+            main.innerHTML = `
+            <h1>
+                Чтобы найти фильм, аниме или сериал, введи в поле его название  
+            </h1>
+            `;
+        } else{
+            main.innerHTML = `
+            <h1>
+                Найдено ${this.state.totalNumber}
+            </h1>
+        `;
+        }
         main.append(new Search(this.state).render());
         main.append(new CardList(this.state, this.appState).render());
         this.app.innerHTML = '';
